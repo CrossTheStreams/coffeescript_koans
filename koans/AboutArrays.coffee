@@ -90,13 +90,13 @@ describe 'About Arrays', ->
 
   it 'should understand range slicing', ->
     oneToTen = [1..10]
-    expect(oneToTen[3..5]).toEqual()
+    expect(oneToTen[3..5]).toEqual([4, 5, 6])
 
     myString = "my string"[0..2]
-    expect(myString).toEqual(FILL_ME_IN)
+    expect(myString).toEqual('my ')
 
     firstTwo = ['one', 'two', 'three']
-    expect(firstTwo[FILL_ME_IN]).toEqual(['one', 'two'])
+    expect(firstTwo[0..1]).toEqual(['one', 'two'])
 
 
   it 'should know array references', ->
@@ -106,34 +106,34 @@ describe 'About Arrays', ->
     passedByReference = (refArray) -> refArray[1] = 'changed in function'
 
     passedByReference array
-    expect(array[1]).toBe(FILL_ME_IN)
+    expect(array[1]).toBe('changed in function')
 
     assignedArray = array
     assignedArray[5] = 'changed in assignedArray'
-    expect(array[5]).toBe(FILL_ME_IN)
+    expect(array[5]).toBe('changed in assignedArray')
 
     copyOfArray = array.slice()
     copyOfArray[3] = 'changed in copyOfArray'
-    expect(array[3]).toBe(FILL_ME_IN)
+    expect(array[3]).toBe('three')
 
 
   it 'should push and pop', ->
     array = [1, 2]
 
     array.push 3
-    expect(array).toEqual(FILL_ME_IN)
+    expect(array).toEqual([1, 2, 3])
 
     poppedValue = array.pop()
-    expect(poppedValue).toBe(FILL_ME_IN)
-    expect(array).toEqual(FILL_ME_IN)
+    expect(poppedValue).toBe(3)
+    expect(array).toEqual([1, 2])
 
 
   it 'should shift arrays', ->
     array = [1, 2]
 
     array.unshift 3
-    expect(array).toEqual(FILL_ME_IN)
+    expect(array).toEqual([3, 1, 2])
 
     shiftedValue = array.shift()
-    expect(shiftedValue).toEqual(FILL_ME_IN)
-    expect(array).toEqual(FILL_ME_IN)
+    expect(shiftedValue).toEqual(3)
+    expect(array).toEqual([1, 2])

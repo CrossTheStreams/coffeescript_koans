@@ -56,7 +56,7 @@ For this project I've used [Watchr](https://github.com/mynyml/watchr) - I've pro
 will automatically compile files as they are saved from the koans/ directory 
 to the lib/koans/ directory. 
 
-The test runner used is [Jasmine](http://pivotal.github.com/jasmine/) with a
+The test runner used is [Jasmine](https://jasmine.github.io/) with a
 customized report viewer.
 
 I've also included a simple AppleScript (ChromeReloadr.sh) that will refresh the front browser window tab 
